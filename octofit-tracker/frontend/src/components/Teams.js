@@ -13,7 +13,7 @@ function Teams() {
    // const apiUrl = `${protocol}://${host}/api/teams/`;
 
    // Deve rimanere letterale nel file per far passare il check:
-const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/activities';
+const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/teams';
 
 const apiUrl = codespace
   ? `https://${codespace}${CODESPACES_API_ACTIVITIES}/`

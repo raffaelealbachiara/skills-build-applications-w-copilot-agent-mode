@@ -11,12 +11,12 @@ function Leaderboard() {
    const host = codespace ? `${codespace}-8000.app.github.dev` : 'localhost:8000';
   // const apiUrl = `${protocol}://${host}/api/leaderboard/`;
 // Deve rimanere letterale nel file per far passare il check:
-const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/activities';
+const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/leaderboard';
 
 const apiUrl = codespace
   ? `https://${codespace}${CODESPACES_API_ACTIVITIES}/`
   : 'http://localhost:8000/api/leaderboard/';
-  
+
     console.log(`[Leaderboard] Fetching from: ${apiUrl}`);
 
     fetch(apiUrl)

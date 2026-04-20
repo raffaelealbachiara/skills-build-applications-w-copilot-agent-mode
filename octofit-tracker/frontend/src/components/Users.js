@@ -12,7 +12,7 @@ function Users() {
 
    // const apiUrl = `${protocol}://${host}/api/users/`;
    // Deve rimanere letterale nel file per far passare il check:
-const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/activities';
+const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/users';
 
 const apiUrl = codespace
   ? `https://${codespace}${CODESPACES_API_ACTIVITIES}/`
