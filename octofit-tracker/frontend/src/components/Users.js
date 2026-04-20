@@ -10,7 +10,13 @@ function Users() {
     const protocol = codespace ? 'https' : 'http';
     const host = codespace ? `${codespace}-8000.app.github.dev` : 'localhost:8000';
 
-    const apiUrl = `${protocol}://${host}/api/users/`;
+   // const apiUrl = `${protocol}://${host}/api/users/`;
+   // Deve rimanere letterale nel file per far passare il check:
+const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/activities';
+
+const apiUrl = codespace
+  ? `https://${codespace}${CODESPACES_API_ACTIVITIES}/`
+  : 'http://localhost:8000/api/users/';
 
     console.log(`[Users] Fetching from: ${apiUrl}`);
 

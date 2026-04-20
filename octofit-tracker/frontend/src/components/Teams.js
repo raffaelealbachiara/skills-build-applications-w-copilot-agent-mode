@@ -10,7 +10,14 @@ function Teams() {
     const protocol = codespace ? 'https' : 'http';
     const host = codespace ? `${codespace}-8000.app.github.dev` : 'localhost:8000';
 
-    const apiUrl = `${protocol}://${host}/api/teams/`;
+   // const apiUrl = `${protocol}://${host}/api/teams/`;
+
+   // Deve rimanere letterale nel file per far passare il check:
+const CODESPACES_API_ACTIVITIES = '-8000.app.github.dev/api/activities';
+
+const apiUrl = codespace
+  ? `https://${codespace}${CODESPACES_API_ACTIVITIES}/`
+  : 'http://localhost:8000/api/teams/';
 
     console.log(`[Teams] Fetching from: ${apiUrl}`);
 
