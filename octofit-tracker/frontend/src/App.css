@@ -1,0 +1,18 @@
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+.table th {
+  background-color: #0d6efd;
+  color: white;
+}
+
+h2 {
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
