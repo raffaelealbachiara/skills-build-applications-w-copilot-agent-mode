@@ -4,6 +4,7 @@ from .models import User, Team, Activity, Leaderboard, Workout
 
 class UserSerializer(serializers.ModelSerializer):
     _id = serializers.SerializerMethodField()
+    password = serializers.CharField(write_only=True)
 
     def get__id(self, obj):
         return str(obj._id) if obj._id else None

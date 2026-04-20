@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from django.contrib.auth.hashers import make_password
 from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
 from datetime import date
 
@@ -16,12 +17,12 @@ class Command(BaseCommand):
 
         # Create users (superheroes)
         users = [
-            User(username='ironman', email='ironman@avengers.com', password='password123'),
-            User(username='spiderman', email='spiderman@avengers.com', password='password123'),
-            User(username='thor', email='thor@avengers.com', password='password123'),
-            User(username='batman', email='batman@dc.com', password='password123'),
-            User(username='superman', email='superman@dc.com', password='password123'),
-            User(username='wonderwoman', email='wonderwoman@dc.com', password='password123'),
+            User(username='ironman', email='ironman@avengers.com', password=make_password('password123')),
+            User(username='spiderman', email='spiderman@avengers.com', password=make_password('password123')),
+            User(username='thor', email='thor@avengers.com', password=make_password('password123')),
+            User(username='batman', email='batman@dc.com', password=make_password('password123')),
+            User(username='superman', email='superman@dc.com', password=make_password('password123')),
+            User(username='wonderwoman', email='wonderwoman@dc.com', password=make_password('password123')),
         ]
         for user in users:
             user.save()
